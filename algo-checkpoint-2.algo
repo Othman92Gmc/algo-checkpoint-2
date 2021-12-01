@@ -30,7 +30,7 @@ FOR k FROM 0 TO length(array_one)-1 STEP 1 DO
 END_FOR
 
 FOR k FROM 0 TO length(array_two)-1 STEP 1 DO
- FOR m FROM 0 TO length(array_one)-1 STEP 1 DO
+    FOR m FROM 0 TO length(array_one)-1 STEP 1 DO
         IF (array_one[m]<>array_two[k]) THEN
             n:=n+1
         END_IF
@@ -44,17 +44,17 @@ END
 
 //....ALGORITHM_HASHTABLE 
 VAR
- Set1 : INTEGER;
- Set2 : INTEGER;
- Sum : INTEGER := 0;
- HASHTAB : HASH_TABLEINTEGER;
- i,j : INTEGER;
+Set1 : INTEGER;
+Set2 : INTEGER;
+Sum : INTEGER := 0;
+HASHTAB : HASH_TABLEINTEGER;
+i,j : INTEGER;
 
 BEGIN
- Read(Set1)
- Read(Set2)
- For i From 0 To Set1.length-1 STEP 1 Do 
-     For j From 0 To Set2.length-1 STEP 1 Do 
+    Read(Set1)
+    Read(Set2)
+    For i From 0 To Set1.length-1 STEP 1 Do 
+    For j From 0 To Set2.length-1 STEP 1 Do 
         IF (HASHTAB.Lookup(Set1[i]) <> HASHTAB.Lookup(Set2[i])) THEN
         Sum:= Sum + HASHTAB.get(Arr1[i] + HASHTAB.get(Arr2[i])
     ELSE 
